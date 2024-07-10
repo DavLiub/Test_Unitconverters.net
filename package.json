@@ -1,0 +1,19 @@
+{
+  "name": "dalettest",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "playwright test",
+    "codegen": "npx playwright codegen https://www.unitconverters.net/length/feet-to-meters.htm"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "playwright": "^1.45.1"
+  },
+  "dependencies": {
+    "@playwright/test": "^1.45.1"
+  }
+}
