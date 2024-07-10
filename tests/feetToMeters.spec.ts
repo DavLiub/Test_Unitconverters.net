@@ -21,7 +21,7 @@ test.describe('Unit Conversion Tests', () => {
     await expect(page.getByLabel('To:')).toHaveValue('0');
   });
 
-  // Test case 3: Convert a decimal number from feet to meters (separated by a dot)
+  // Test case 3: Convert a float number from feet to meters (separated by a dot)
   test('Convert a decimal number from feet to meters separated by a dot', async ({ page }) => {
     await page.getByLabel('From:').fill('-10.5');
     await page.getByRole('button', { name: 'Convert' }).click();
@@ -85,7 +85,7 @@ test.describe('Unit Conversion Tests', () => {
     await expect(page.getByLabel('To:')).toHaveValue('32.80839895');
   });
 
-  // Test case 11: Convert a decimal number with two dot
+  // Test case 11: Convert a float number with two dot
   test('Convert a decimal number  with two dot', async ({ page }) => {
     await page.getByLabel('From:').fill('10.5.3');
     await page.getByRole('button', { name: 'Convert' }).click();
@@ -93,7 +93,7 @@ test.describe('Unit Conversion Tests', () => {
     await expect(page.locator('#ucresult')).toContainText('Please provide a valid number!');
   });
 
-  // Test case 12: Convert a decimal number from feet to meters (comma separated)
+  // Test case 12: Convert a float number from feet to meters (comma separated)
   test('Convert a decimal number from feet to meters comma separated', async ({ page }) => {
     await page.getByLabel('From:').click();
     await page.getByLabel('From:').fill('10,5');
@@ -101,7 +101,7 @@ test.describe('Unit Conversion Tests', () => {
     await expect(page.getByLabel('To:')).toHaveValue('3.2004');
   });
 
-  // Test case 13: Convert a decimal number with two commas
+  // Test case 13: Convert a float number with two commas
   test('Convert a decimal number with two commas', async ({ page }) => {
     await page.getByLabel('From:').click();
     await page.getByLabel('From:').fill('10,5,3');
